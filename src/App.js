@@ -1,9 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Dog from "./dog.svg";
 
 function App() {
   return (
-    <h1>Foobar</h1>
+    <>
+      <h1>Fetch me a Dog!</h1>
+      <img src={Dog} alt="Dog logo" className="dog-logo" />
+    </>
   );
 }
 
