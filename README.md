@@ -23,4 +23,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contributing
 
+Pull requests are welcome.
+
 ## Changelog
+
+- **0.1.0**
+  - Add icons, assets
+  - Add html elements
+  - Add styles according to the Figma design
+  - Center everything vertically
