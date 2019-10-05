@@ -10,7 +10,7 @@ function App() {
       <button className="btn">Fetch!</button>
       <img
         src="https://via.placeholder.com/600x400"
-        alt="Image of a dog"
+        alt="A cute dog"
         className="dog-image"
       />
     </>
