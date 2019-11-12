@@ -34,3 +34,7 @@ Pull requests are welcome.
   - Add html elements
   - Add styles according to the Figma design
   - Center everything vertically
+- **0.2.0**
+  - Setup Travis CI
+  - Fetch dog picture from Dog
+  - Minor style/UI changes
