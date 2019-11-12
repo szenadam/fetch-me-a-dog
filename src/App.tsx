@@ -25,12 +25,25 @@ function App() {
         console.log(error);
       });
   }
+
+  const debounce = <F extends (...args: any[]) => any>(func: F, waitFor: number) => {
+    let timeout: any;
+  
+    return (...args: Parameters<F>): Promise<ReturnType<F>> =>
+      new Promise(resolve => {
+        if (timeout) {
+          clearTimeout(timeout)
+        }
+  
+        timeout = setTimeout(() => resolve(func(...args)), waitFor)
+      })
+  }
   
   return (
     <div className="wrapper">
       <h1>Fetch me a Dog!</h1>
       <img src={Dog} alt="Dog logo" className="dog-logo" />
-      <button className="btn" onClick={handleFetchDog}>
+      <button className="btn" onClick={debounce(handleFetchDog, 200)}>
         Fetch!
       </button>
       <img src={dogUrl} alt="A cute dog" className="dog-image" />
