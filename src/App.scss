@@ -16,6 +16,9 @@ h1 {
 .dog-logo {
   height: 250px;
   margin-bottom: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20%;
 }
 
 .btn {
@@ -30,6 +33,15 @@ h1 {
   margin-bottom: 50px;
 }
 
+.btn:hover {
+  background-color: $Other;
+}
+
+button:focus {
+  outline: 0;
+}
+
 .dog-image {
   margin-bottom: 50px;
+  border-radius: 50px;
 }
