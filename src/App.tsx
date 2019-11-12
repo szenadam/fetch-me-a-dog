@@ -1,6 +1,6 @@
-import React from "react";
-import "./App.scss";
-import Dog from "./dog.svg";
+import React, { useState } from 'react';
+import './App.scss';
+import Dog from './assets/dog.svg';
 
 function App() {
   return (
