@@ -1,5 +1,7 @@
 # Fetch me a Dog
 
+[![Build Status](https://travis-ci.org/szenadam/fetch-me-a-dog.svg?branch=master)](https://travis-ci.org/szenadam/fetch-me-a-dog)
+
 ## Description
 
 Fetch me a Dog! is a page where you can click a button and you get a cute dog pic.
