@@ -36,5 +36,5 @@ Pull requests are welcome.
   - Center everything vertically
 - **0.2.0**
   - Setup Travis CI
-  - Fetch dog picture from Dog
+  - Fetch dog picture from Dog API
   - Minor style/UI changes
