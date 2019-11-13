@@ -1,4 +1,4 @@
-@import "colors";
+@import 'colors';
 
 .wrapper {
   display: flex;
@@ -50,4 +50,28 @@ button:focus {
 .dog-image {
   margin-bottom: 50px;
   border-radius: 50px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .dog-logo {
+    height: 100px;
+    margin-bottom: 15px;
+    position: inherit;
+    display: block;
+  }
+
+  h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 36px;
+  }
+
+  .btn {
+    font-size: 24px;
+    width: 150px;
+    height: 45px;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 25px;
+  }
 }
