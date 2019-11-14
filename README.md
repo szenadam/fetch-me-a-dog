@@ -7,6 +7,14 @@
 Fetch me a Dog! is a page where you can click a button and you get a cute dog pic.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## TODO
+
+- Mobile view
+- GitHub Corner badge
+- Color themes
+- Travis CI auto deploy master branch changes
+- Enable/setup service worker
+
 ## Requirements
 
 - Nodejs >= 10.16.0 (npm >= 6.11.3)
@@ -36,5 +44,5 @@ Pull requests are welcome.
   - Center everything vertically
 - **0.2.0**
   - Setup Travis CI
-  - Fetch dog picture from Dog
+  - Fetch dog picture from Dog API
   - Minor style/UI changes
