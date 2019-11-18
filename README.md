@@ -45,3 +45,5 @@ Pull requests are welcome.
   - Setup Travis CI
   - Fetch dog picture from Dog API
   - Minor style/UI changes
+- **0.3.0**
+  - Add responsive mobile view
