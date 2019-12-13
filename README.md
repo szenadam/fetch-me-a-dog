@@ -13,6 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Color themes
 - Travis CI auto deploy master branch changes
 - Enable/setup service worker
+- Add 'Back' button so users can view the previous dog picture (implement it with Redux)
 
 ## Requirements
 
