@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Dog from './assets/dog.svg';
+import GithubCornerBadge from './assets/github-corner-right.svg';
 
 interface DogApiResponse {
   message: string;
@@ -41,6 +42,9 @@ function App() {
   
   return (
     <div className="wrapper">
+      <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel='noreferrer noopener'>
+        <img className="github-badge-right" src={GithubCornerBadge} alt="GitHub repository page"/>
+      </a>
       <h1>Fetch me a Dog!</h1>
       <img src={Dog} alt="Dog logo" className="dog-logo" />
       <button className="btn" onClick={debounce(handleFetchDog, 200)}>
