@@ -9,7 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## TODO
 
-- GitHub Corner badge
 - Color themes
 - Travis CI auto deploy master branch changes
 - Enable/setup service worker
