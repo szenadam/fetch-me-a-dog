@@ -84,6 +84,10 @@ button:focus {
   .dog-image {
     max-width: 100vw;
   }
+
+  .github-badge-right {
+    width: 15vw;
+  }
 }
 
 @media only screen and (max-width: 374px) {
@@ -92,6 +96,10 @@ button:focus {
     margin-bottom: 15px;
     position: inherit;
     display: block;
+  }
+
+  .github-badge-right {
+    width: 10vw;
   }
 
   h1 {
