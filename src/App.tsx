@@ -9,13 +9,20 @@ interface DogApiResponse {
   status: string;
 }
 
-function picturePicker(state = { pics: ['']}, action: any) {
+function picturePicker(state = { pics: ['https://via.placeholder.com/600x400'], currentPic: 'https://via.placeholder.com/600x400'}, action: any) {
   switch (action.type) {
     case 'NEWPIC':
+      state.currentPic = action.payload;
       state.pics.push(action.payload);
-      return { ...state}
+      return { ...state }
     default:
       return state;
+  }
+}
+
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION__?: any;
   }
 }
 
