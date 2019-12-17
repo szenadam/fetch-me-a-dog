@@ -9,12 +9,18 @@ interface DogApiResponse {
   status: string;
 }
 
-function picturePicker(state = { pics: ['https://via.placeholder.com/600x400'], currentPic: 'https://via.placeholder.com/600x400'}, action: any) {
+function picturePicker(
+  state = {
+    pics: ['https://via.placeholder.com/600x400'],
+    currentPic: 'https://via.placeholder.com/600x400'
+  },
+  action: any
+) {
   switch (action.type) {
     case 'NEWPIC':
       state.currentPic = action.payload;
       state.pics.push(action.payload);
-      return { ...state }
+      return { ...state };
     default:
       return state;
   }
@@ -26,21 +32,23 @@ declare global {
   }
 }
 
-let store = createStore(picturePicker, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+let store = createStore(
+  picturePicker,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 function App() {
-
-  const [dogUrl, setDogUrl] = useState("https://via.placeholder.com/600x400");
+  const [dogUrl, setDogUrl] = useState('https://via.placeholder.com/600x400');
 
   useEffect(() => {
     handleFetchDog();
-  }, [])
+  }, []);
 
   function handleFetchDog(): void {
     fetch('https://dog.ceo/api/breeds/image/random')
       .then((response: Response) => response.json())
       .then((data: DogApiResponse) => {
-        store.dispatch({type: 'NEWPIC', payload: data.message})
+        store.dispatch({ type: 'NEWPIC', payload: data.message });
         setDogUrl(data.message);
       })
       .catch((error: any) => {
@@ -50,21 +58,21 @@ function App() {
 
   const debounce = <F extends (...args: any[]) => any>(func: F, waitFor: number) => {
     let timeout: any;
-  
+
     return (...args: Parameters<F>): Promise<ReturnType<F>> =>
       new Promise(resolve => {
         if (timeout) {
-          clearTimeout(timeout)
+          clearTimeout(timeout);
         }
-  
-        timeout = setTimeout(() => resolve(func(...args)), waitFor)
-      })
-  }
-  
+
+        timeout = setTimeout(() => resolve(func(...args)), waitFor);
+      });
+  };
+
   return (
     <div className="wrapper">
-      <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel='noreferrer noopener'>
-        <img className="github-badge-right" src={GithubCornerBadge} alt="GitHub repository page"/>
+      <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel="noreferrer noopener">
+        <img className="github-badge-right" src={GithubCornerBadge} alt="GitHub repository page" />
       </a>
       <h1>Fetch me a Dog!</h1>
       <img src={Dog} alt="Dog logo" className="dog-logo" />
@@ -73,7 +81,6 @@ function App() {
       </button>
       <img src={dogUrl} alt="A cute dog" className="dog-image" />
     </div>
-    
   );
 }
 
