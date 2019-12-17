@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createStore } from 'redux';
 import './App.scss';
 import Dog from './assets/dog.svg';
 import GithubCornerBadge from './assets/github-corner-right.svg';
@@ -7,6 +8,18 @@ interface DogApiResponse {
   message: string;
   status: string;
 }
+
+function picturePicker(state = { pics: ['']}, action: any) {
+  switch (action.type) {
+    case 'NEWPIC':
+      state.pics.push(action.payload);
+      return { ...state}
+    default:
+      return state;
+  }
+}
+
+let store = createStore(picturePicker, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 function App() {
 
@@ -20,6 +33,7 @@ function App() {
     fetch('https://dog.ceo/api/breeds/image/random')
       .then((response: Response) => response.json())
       .then((data: DogApiResponse) => {
+        store.dispatch({type: 'NEWPIC', payload: data.message})
         setDogUrl(data.message);
       })
       .catch((error: any) => {
