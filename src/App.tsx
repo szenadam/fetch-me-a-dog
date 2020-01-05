@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { createStore } from 'redux';
 import './App.scss';
 import Dog from './assets/dog.svg';
 import GithubCornerBadge from './assets/github-corner-right.svg';
@@ -8,34 +7,6 @@ interface DogApiResponse {
   message: string;
   status: string;
 }
-
-function picturePicker(
-  state = {
-    pics: ['https://via.placeholder.com/600x400'],
-    currentPic: 'https://via.placeholder.com/600x400'
-  },
-  action: any
-) {
-  switch (action.type) {
-    case 'NEWPIC':
-      state.currentPic = action.payload;
-      state.pics.push(action.payload);
-      return { ...state };
-    default:
-      return state;
-  }
-}
-
-declare global {
-  interface Window {
-    __REDUX_DEVTOOLS_EXTENSION__?: any;
-  }
-}
-
-let store = createStore(
-  picturePicker,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
 
 function App() {
   const [dogUrl, setDogUrl] = useState('https://via.placeholder.com/600x400');
@@ -48,7 +19,6 @@ function App() {
     fetch('https://dog.ceo/api/breeds/image/random')
       .then((response: Response) => response.json())
       .then((data: DogApiResponse) => {
-        store.dispatch({ type: 'NEWPIC', payload: data.message });
         setDogUrl(data.message);
       })
       .catch((error: any) => {
@@ -58,13 +28,11 @@ function App() {
 
   const debounce = <F extends (...args: any[]) => any>(func: F, waitFor: number) => {
     let timeout: any;
-
     return (...args: Parameters<F>): Promise<ReturnType<F>> =>
       new Promise(resolve => {
         if (timeout) {
           clearTimeout(timeout);
         }
-
         timeout = setTimeout(() => resolve(func(...args)), waitFor);
       });
   };
