@@ -58,7 +58,7 @@ function App() {
       <button className="btn" onClick={debounce(handleFetchDog, 200)}>
         Fetch!
       </button>
-      <button className="btn" disabled={dogUrlList.length <= 1} onClick={handlePreviousImg}>
+      <button className={"prev-btn" + (dogUrlList.length === 1 ? ' hidden' : '')} disabled={dogUrlList.length <= 1} onClick={handlePreviousImg}>
         Previous
       </button>
       <img src={lastDogPicUrl} alt="A cute dog" className="dog-image" />

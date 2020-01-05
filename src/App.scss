@@ -36,7 +36,19 @@ h1 {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  margin-bottom: 50px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s;
+}
+
+.prev-btn {
+  color: #fff;
+  background: $Secondary;
+  font-size: 18px;
+  width: 150px;
+  height: 45px;
+  border: none;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
   transition: all 0.3s;
 }
 
@@ -56,6 +68,10 @@ button:focus {
 .dog-image {
   margin-bottom: 50px;
   border-radius: 50px;
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
