@@ -12,7 +12,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Color themes
 - Travis CI auto deploy master branch changes
 - Enable/setup service worker
-- Add 'Back' button so users can view the previous dog picture (implement it with Redux)
 
 ## Requirements
 
@@ -47,3 +46,7 @@ Pull requests are welcome.
   - Minor style/UI changes
 - **0.3.0**
   - Add responsive mobile view
+- **0.4.0**
+  - Add redux for managing previous state
+- **0.5.0**
+  - Add previous image functionality (remove redux, use React Hooks instead)
