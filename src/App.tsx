@@ -9,7 +9,8 @@ interface DogApiResponse {
 }
 
 function App() {
-  const [dogUrl, setDogUrl] = useState('https://via.placeholder.com/600x400');
+  const [dogUrlList, updateDogUrlList] = useState(['https://via.placeholder.com/600x400']);
+  let lastDogPicUrl: string | undefined = dogUrlList[dogUrlList.length - 1];
 
   useEffect(() => {
     handleFetchDog();
@@ -19,7 +20,10 @@ function App() {
     fetch('https://dog.ceo/api/breeds/image/random')
       .then((response: Response) => response.json())
       .then((data: DogApiResponse) => {
-        setDogUrl(data.message);
+        updateDogUrlList(oldList => {
+          const newList = [...oldList, data.message];
+          return newList;
+        });
       })
       .catch((error: any) => {
         console.log(error);
@@ -47,7 +51,7 @@ function App() {
       <button className="btn" onClick={debounce(handleFetchDog, 200)}>
         Fetch!
       </button>
-      <img src={dogUrl} alt="A cute dog" className="dog-image" />
+      <img src={lastDogPicUrl} alt="A cute dog" className="dog-image" />
     </div>
   );
 }
