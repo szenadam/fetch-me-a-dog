@@ -30,6 +30,13 @@ function App() {
       });
   }
 
+  function handlePreviousImg(): void {
+    updateDogUrlList(oldList => {
+      oldList.pop();
+      return [...oldList];
+    });
+  }
+
   const debounce = <F extends (...args: any[]) => any>(func: F, waitFor: number) => {
     let timeout: any;
     return (...args: Parameters<F>): Promise<ReturnType<F>> =>
@@ -50,6 +57,9 @@ function App() {
       <img src={Dog} alt="Dog logo" className="dog-logo" />
       <button className="btn" onClick={debounce(handleFetchDog, 200)}>
         Fetch!
+      </button>
+      <button className="btn" disabled={dogUrlList.length <= 1} onClick={handlePreviousImg}>
+        Previous
       </button>
       <img src={lastDogPicUrl} alt="A cute dog" className="dog-image" />
     </div>
