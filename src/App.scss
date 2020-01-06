@@ -40,11 +40,16 @@ h1 {
   transition: all 0.3s;
 }
 
+.color-palette {
+  display: flex;
+}
+
 .theme-1 {
   display: flex;
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 1rem;
+  margin-right: 1rem;
 
   .theme-item {
     height: 20px;
@@ -68,6 +73,36 @@ h1 {
   .item-2 { background-color: $Secondary; }
   .item-3 { background-color: $Background; }
   .item-4 { background-color: $Other; }
+}
+
+.theme-2 {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+  .theme-item {
+    height: 20px;
+    width: 20px;
+    background-color: $Primary;
+    border-right: 1px solid black;
+  }
+
+  .theme-item:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .theme-item:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 0;
+  }
+
+  .item-1 { background-color: $Theme2Primary; }
+  .item-2 { background-color: $Theme2Secondary; }
+  .item-3 { background-color: $Theme2Background; }
+  .item-4 { background-color: $Theme2Other; }
 }
 
 .prev-btn {
