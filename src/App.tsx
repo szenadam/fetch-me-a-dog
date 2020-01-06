@@ -54,6 +54,12 @@ function App() {
         <img className="github-badge-right" src={GithubCornerBadge} alt="GitHub repository page" />
       </a>
       <h1>Fetch me a Dog!</h1>
+      <div className="theme-1">
+        <div className="theme-item item-1"></div>
+        <div className="theme-item item-2"></div>
+        <div className="theme-item item-3"></div>
+        <div className="theme-item item-4"></div>
+      </div>
       <img src={Dog} alt="Dog logo" className="dog-logo" />
       <button className="btn" onClick={debounce(handleFetchDog, 200)}>
         Fetch!
