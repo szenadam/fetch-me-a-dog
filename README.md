@@ -11,7 +11,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Color themes
 - Travis CI auto deploy master branch changes
-- Enable/setup service worker
 
 ## Requirements
 
