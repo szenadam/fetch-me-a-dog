@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Dog from './assets/dog.svg';
 import GithubCornerBadge from './assets/github-corner-right.svg';
+import Placeholder from './assets/placeholder_300x200.png';
 
 interface DogApiResponse {
   message: string;
@@ -9,7 +10,7 @@ interface DogApiResponse {
 }
 
 function App() {
-  const [dogUrlList, updateDogUrlList] = useState(['https://via.placeholder.com/600x400']);
+  const [dogUrlList, updateDogUrlList] = useState([Placeholder]);
   let lastDogPicUrl: string | undefined = dogUrlList[dogUrlList.length - 1];
 
   useEffect(() => {
