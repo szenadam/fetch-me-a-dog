@@ -20,7 +20,7 @@ function GithubBadge(props: GithubBadgeProps) {
       height="80"
       viewBox="0 0 250 250"
       fill={props.backgroundFill}
-      className='github-badge-right'
+      className='github-badge'
       style={{position: 'absolute', top: 0, right: 0}}
     >
       <path d="M0 0l115 115h15l12 27 108 108V0z" fill={props.octoFill} />
