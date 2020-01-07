@@ -14,7 +14,7 @@ interface Theme {
 
 function App() {
   const [dogUrlList, updateDogUrlList] = useState(['https://via.placeholder.com/600x400']);
-  const [theme, setTheme] = useState<Theme>({ btn: '' });
+  const [theme, setTheme] = useState<string>('');
   let lastDogPicUrl: string | undefined = dogUrlList[dogUrlList.length - 1];
 
   useEffect(() => {
@@ -60,28 +60,14 @@ function App() {
       </a>
       <h1>Fetch me a Dog!</h1>
       <div className="color-palette">
-        <div
-          className="theme-1"
-          onClick={() =>
-            setTheme(() => {
-              return { btn: '' };
-            })
-          }
-        >
+        <div className="theme-1" onClick={() => setTheme('')}>
           <div className="theme-item item-1"></div>
           <div className="theme-item item-2"></div>
           <div className="theme-item item-3"></div>
           <div className="theme-item item-4"></div>
         </div>
 
-        <div
-          className="theme-2"
-          onClick={() =>
-            setTheme(() => {
-              return { btn: 'theme2' };
-            })
-          }
-        >
+        <div className="theme-2" onClick={() => setTheme('theme2')}>
           <div className="theme-item item-1"></div>
           <div className="theme-item item-2"></div>
           <div className="theme-item item-3"></div>
@@ -89,11 +75,11 @@ function App() {
         </div>
       </div>
       <img src={Dog} alt="Dog logo" className="dog-logo" />
-      <button className={`btn ${theme.btn}`} onClick={debounce(handleFetchDog, 200)}>
+      <button className={`btn ${theme}`} onClick={debounce(handleFetchDog, 200)}>
         Fetch!
       </button>
       <button
-        className={'prev-btn' + (dogUrlList.length === 1 ? ' hidden' : '')}
+        className={`prev-btn ${dogUrlList.length === 1 ? ' hidden' : ''} ${theme}`}
         disabled={dogUrlList.length <= 1}
         onClick={handlePreviousImg}
       >
