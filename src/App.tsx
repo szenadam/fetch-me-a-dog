@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
 import './App.scss';
 import Dog from './assets/dog.svg';
 import GithubCornerBadge from './assets/github-corner-right.svg';
 import Placeholder from './assets/placeholder_300x200.png';
+import { debounce } from './Helpers';
 
 interface DogApiResponse {
   message: string;
@@ -38,17 +40,6 @@ function App() {
     });
   }
 
-  const debounce = <F extends (...args: any[]) => any>(func: F, waitFor: number) => {
-    let timeout: any;
-    return (...args: Parameters<F>): Promise<ReturnType<F>> =>
-      new Promise(resolve => {
-        if (timeout) {
-          clearTimeout(timeout);
-        }
-        timeout = setTimeout(() => resolve(func(...args)), waitFor);
-      });
-  };
-
   return (
     <div className="wrapper">
       <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel="noreferrer noopener">
@@ -59,7 +50,11 @@ function App() {
       <button className="btn" onClick={debounce(handleFetchDog, 200)}>
         Fetch!
       </button>
-      <button className={"prev-btn" + (dogUrlList.length === 1 ? ' hidden' : '')} disabled={dogUrlList.length <= 1} onClick={handlePreviousImg}>
+      <button
+        className={'prev-btn' + (dogUrlList.length === 1 ? ' hidden' : '')}
+        disabled={dogUrlList.length <= 1}
+        onClick={handlePreviousImg}
+      >
         Previous
       </button>
       <img src={lastDogPicUrl} alt="A cute dog" className="dog-image" />
