@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+
 import './App.scss';
 import Dog from './assets/dog.svg';
+import Placeholder from './assets/placeholder_300x200.png';
+import { debounce } from './Helpers';
 
 interface DogApiResponse {
   message: string;
@@ -38,7 +41,7 @@ function GithubBadge(props: GithubBadgeProps) {
 }
 
 function App() {
-  const [dogUrlList, updateDogUrlList] = useState(['https://via.placeholder.com/600x400']);
+  const [dogUrlList, updateDogUrlList] = useState([Placeholder]);
   const [theme, setTheme] = useState<string>('');
   let lastDogPicUrl: string | undefined = dogUrlList[dogUrlList.length - 1];
 
@@ -66,17 +69,6 @@ function App() {
       return [...oldList];
     });
   }
-
-  const debounce = <F extends (...args: any[]) => any>(func: F, waitFor: number) => {
-    let timeout: any;
-    return (...args: Parameters<F>): Promise<ReturnType<F>> =>
-      new Promise(resolve => {
-        if (timeout) {
-          clearTimeout(timeout);
-        }
-        timeout = setTimeout(() => resolve(func(...args)), waitFor);
-      });
-  };
 
   return (
     <div className="wrapper">
