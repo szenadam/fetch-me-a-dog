@@ -43,7 +43,7 @@ function App() {
   }
 
   return (
-    <div className={`wrapper ${theme}`}>
+    <div className={`wrapper${theme}`}>
       <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel="noreferrer noopener">
         <GithubBadge theme={theme} />
       </a>
@@ -56,7 +56,7 @@ function App() {
           <div className="theme-item item-4"></div>
         </div>
 
-        <div className="theme-2" onClick={() => setTheme('theme2')}>
+        <div className="theme-2" onClick={() => setTheme(' theme2')}>
           <div className="theme-item item-1"></div>
           <div className="theme-item item-2"></div>
           <div className="theme-item item-3"></div>
@@ -64,11 +64,11 @@ function App() {
         </div>
       </div>
       <img src={Dog} alt="Dog logo" className="dog-logo" />
-      <button className={`btn ${theme}`} onClick={debounce(handleFetchDog, 200)}>
+      <button className={`btn${theme}`} onClick={debounce(handleFetchDog, 200)}>
         Fetch!
       </button>
       <button
-        className={`prev-btn ${dogUrlList.length === 1 ? ' hidden' : ''} ${theme}`}
+        className={`prev-btn${theme}${dogUrlList.length === 1 ? ' hidden' : ''}`}
         disabled={dogUrlList.length <= 1}
         onClick={handlePreviousImg}
       >
