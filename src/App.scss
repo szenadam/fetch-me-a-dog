@@ -72,6 +72,33 @@ button:focus {
   }
 }
 
+.prev-btn {
+  color: #fff;
+  background-color: $Secondary;
+  font-size: 18px;
+  width: 150px;
+  height: 45px;
+  border: none;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+  &.theme2 {
+    background-color: $Theme2Secondary;
+  }
+
+  &:active {
+    background-color: $Theme2Secondary;
+    transform: translateY(4px);
+  }
+
+  &:hover {
+    background-color: $Theme2Other;
+    &.theme2 {
+      background-color: $Theme2Other;
+    }
+  }
+}
+
 .color-palette {
   display: flex;
 }
@@ -135,21 +162,6 @@ button:focus {
   .item-2 { background-color: $Theme2Secondary; }
   .item-3 { background-color: $Theme2Background; }
   .item-4 { background-color: $Theme2Other; }
-}
-
-.prev-btn {
-  color: #fff;
-  background-color: $Secondary;
-  font-size: 18px;
-  width: 150px;
-  height: 45px;
-  border: none;
-  border-radius: 2rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s;
-  &.theme2 {
-    background-color: $Theme2Secondary;
-  }
 }
 
 .dog-image {
