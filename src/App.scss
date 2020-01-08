@@ -5,6 +5,11 @@ h1 {
   margin-bottom: 50px;
   font-size: 72px;
   font-weight: 300;
+  color: $Primary;
+  &.theme2 {
+    color: $Theme2Primary;
+    background: $Theme2Background;
+  }
 }
 
 button:focus {
@@ -15,6 +20,12 @@ button:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: $Background;
+  color: $Primary;
+  &.theme2 {
+    color: $Theme2Primary;
+    background: $Theme2Background;
+  }
 }
 
 .github-badge {

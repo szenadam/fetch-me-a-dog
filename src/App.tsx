@@ -43,11 +43,11 @@ function App() {
   }
 
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${theme}`}>
       <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel="noreferrer noopener">
         <GithubBadge backgroundFill='#f9f6e7' octoFill='#39566e' />
       </a>
-      <h1>Fetch me a Dog!</h1>
+      <h1 className={`${theme}`}>Fetch me a Dog!</h1>
       <div className="color-palette">
         <div className="theme-1" onClick={() => setTheme('')}>
           <div className="theme-item item-1"></div>
