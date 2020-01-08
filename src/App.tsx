@@ -45,7 +45,7 @@ function App() {
   return (
     <div className={`wrapper ${theme}`}>
       <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel="noreferrer noopener">
-        <GithubBadge backgroundFill='#f9f6e7' octoFill='#39566e' />
+        <GithubBadge theme={theme} />
       </a>
       <h1 className={`${theme}`}>Fetch me a Dog!</h1>
       <div className="color-palette">

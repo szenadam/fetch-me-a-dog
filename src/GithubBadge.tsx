@@ -1,22 +1,27 @@
 import React from 'react';
 
 interface GithubBadgeProps {
-  backgroundFill: string;
-  octoFill: string;
+  theme: string;
 }
 
 export function GithubBadge(props: GithubBadgeProps) {
+  let backgroundFill= '#f9f6e7';
+  let octoFill='#39566e';
+  if (props.theme === 'theme2') {
+    backgroundFill = '#f3efe7';
+    octoFill = '#18745c';
+  }
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="80"
       height="80"
       viewBox="0 0 250 250"
-      fill={props.backgroundFill}
+      fill={backgroundFill}
       className="github-badge"
       style={{ position: 'absolute', top: 0, right: 0 }}
     >
-      <path d="M0 0l115 115h15l12 27 108 108V0z" fill={props.octoFill} />
+      <path d="M0 0l115 115h15l12 27 108 108V0z" fill={octoFill} />
       <path
         className="octo-arm"
         d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16"
