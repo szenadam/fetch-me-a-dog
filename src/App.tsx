@@ -6,6 +6,7 @@ import Placeholder from './assets/placeholder_300x200.png';
 import { debounce } from './Helpers';
 import { GithubBadge } from './GithubBadge';
 
+
 interface DogApiResponse {
   message: string;
   status: string;
