@@ -54,3 +54,6 @@ Pull requests are welcome.
   - Register service worker
   - Fix some media query styles
   - Minor code refactor
+- **0.6.1**
+  - Fix previous button border radius
+  - Fix GitHub badge on smaller devices
