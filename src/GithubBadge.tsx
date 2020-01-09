@@ -7,10 +7,11 @@ interface GithubBadgeProps {
 export function GithubBadge(props: GithubBadgeProps) {
   let backgroundFill= '#f9f6e7';
   let octoFill='#39566e';
-  if (props.theme === 'theme2') {
+  if (props.theme === ' theme2') {
     backgroundFill = '#f3efe7';
     octoFill = '#18745c';
   }
+  
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
