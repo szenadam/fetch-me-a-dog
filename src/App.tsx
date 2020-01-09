@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './App.scss';
 import Dog from './assets/dog.svg';
-import Placeholder from './assets/placeholder_300x200.png';
+import Placeholder from './assets/placeholder_600x400.png';
 import { debounce } from './Helpers';
 import { GithubBadge } from './GithubBadge';
 
