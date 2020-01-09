@@ -79,7 +79,7 @@ button:focus {
   width: 150px;
   height: 45px;
   border: none;
-  border-radius: 2rem;
+  border-radius: 1rem;
   margin-bottom: 1rem;
   transition: all 0.3s;
   &.theme2 {
@@ -203,6 +203,7 @@ button:focus {
 
   .github-badge {
     width: 15vw;
+    height: auto;
   }
 }
 
@@ -216,6 +217,7 @@ button:focus {
 
   .github-badge {
     width: 10vw;
+    height: auto;
   }
 
   h1 {
