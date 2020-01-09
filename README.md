@@ -9,7 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## TODO
 
-- Color themes
 - Travis CI auto deploy master branch changes
 - Hamburger menu on mobile
 
@@ -50,3 +49,8 @@ Pull requests are welcome.
   - Add redux for managing previous state
 - **0.5.0**
   - Add previous image functionality (remove redux, use React Hooks instead)
+- **0.6.0**
+  - Add themes
+  - Register service worker
+  - Fix some media query styles
+  - Minor code refactor
