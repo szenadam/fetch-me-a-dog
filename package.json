@@ -2,6 +2,16 @@
   "name": "fetch-me-a-dog",
   "version": "0.6.1",
   "private": true,
+  "description": "Fetch a cute dog picture",
+  "author": {
+    "name": "szen adam",
+    "email": "szenadam1@gmail.com",
+    "url": "https://fetchmeadog.com/"
+  },
+  "homepage": "https://github.com/szenadam/fetch-me-a-dog",
+  "repository": {
+    "url": "https://github.com/szenadam/fetch-me-a-dog.git",
+  },
   "dependencies": {
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.11",

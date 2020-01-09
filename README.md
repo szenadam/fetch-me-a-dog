@@ -1,4 +1,4 @@
-# Fetch me a Dog
+# 🐶 Fetch me a Dog
 
 [![Build Status](https://travis-ci.org/szenadam/fetch-me-a-dog.svg?branch=master)](https://travis-ci.org/szenadam/fetch-me-a-dog)
 
@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## TODO
 
-- Travis CI auto deploy master branch changes
+- Travis CI auto deploy tagged commits
 - Hamburger menu on mobile
 
 ## Requirements
