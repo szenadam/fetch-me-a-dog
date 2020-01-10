@@ -11,7 +11,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Travis CI auto deploy tagged commits
 - Hamburger menu on mobile
-- Fix meta in index.html
 - Redesign styles to be more user friendly (figma designs v2)
 
 ## Requirements
