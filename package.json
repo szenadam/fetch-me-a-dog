@@ -5,12 +5,11 @@
   "description": "Fetch a cute dog picture",
   "author": {
     "name": "szen adam",
-    "email": "szenadam1@gmail.com",
-    "url": "https://fetchmeadog.com/"
+    "email": "szenadam1@gmail.com"
   },
-  "homepage": "https://github.com/szenadam/fetch-me-a-dog",
+  "homepage": "https://fetchmeadog.com",
   "repository": {
-    "url": "https://github.com/szenadam/fetch-me-a-dog.git",
+    "url": "https://github.com/szenadam/fetch-me-a-dog.git"
   },
   "dependencies": {
     "@types/jest": "^24.0.18",
