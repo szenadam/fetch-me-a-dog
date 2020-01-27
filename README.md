@@ -4,7 +4,7 @@
 
 ## Description
 
-Fetch me a Dog! is a page where you can click a button and you get a cute dog pic.
+Fetch me a Dog! is a page where you can click a button and you get a cute picture of a dog.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## TODO
@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Requirements
 
-- Nodejs >= 10.16.0 (npm >= 6.11.3)
+- Nodejs >= 12.14.1 (npm >= 6.13.6)
 - Visual Studio Code
 
 ## Setup
