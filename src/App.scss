@@ -43,6 +43,13 @@ button:focus {
   display: block;
 }
 
+.btns {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
 .btn {
   color: #fff;
   background-color: $Theme1Secondary;
@@ -254,6 +261,11 @@ button:focus {
       border-right: 0;
     }
   }
+
+  .btns {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
 
 @media only screen and (max-width: 374px) {
@@ -290,5 +302,10 @@ button:focus {
 
   .color-palette {
     top:  50px;
+  }
+
+  .btns {
+    flex-flow: row wrap;
+    justify-content: space-around;
   }
 }

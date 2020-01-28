@@ -6,12 +6,10 @@ import Placeholder from './assets/placeholder_600x400.png';
 import { debounce } from './Helpers';
 import { GithubBadge } from './components/GithubBadge';
 
-
 interface DogApiResponse {
   message: string;
   status: string;
 }
-
 
 function App() {
   const [dogUrlList, updateDogUrlList] = useState([Placeholder]);
@@ -65,16 +63,18 @@ function App() {
       </a>
       <h1 className={`${theme}`}>Fetch me a Dog!</h1>
       <img src={Dog} alt="Dog logo" className="dog-logo" />
-      <button className={`btn${theme}`} onClick={debounce(handleFetchDog, 200)}>
-        Fetch!
-      </button>
-      <button
-        className={`prev-btn${theme}${dogUrlList.length === 1 ? ' hidden' : ''}`}
-        disabled={dogUrlList.length <= 1}
-        onClick={handlePreviousImg}
-      >
-        Previous
-      </button>
+      <section className="btns">
+        <button className={`btn${theme}`} onClick={debounce(handleFetchDog, 200)}>
+          Fetch!
+        </button>
+        <button
+          className={`prev-btn${theme}${dogUrlList.length === 1 ? ' hidden' : ''}`}
+          disabled={dogUrlList.length <= 1}
+          onClick={handlePreviousImg}
+        >
+          Previous
+        </button>
+      </section>
       <img src={lastDogPicUrl} alt="A cute dog" className="dog-image" />
     </div>
   );
