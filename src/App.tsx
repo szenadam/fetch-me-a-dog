@@ -68,7 +68,7 @@ function App() {
           Fetch!
         </button>
         <button
-          className={`prev-btn${theme}${dogUrlList.length === 1 ? ' hidden' : ''}`}
+          className={`btn${theme}${dogUrlList.length === 1 ? ' hidden' : ''}`}
           disabled={dogUrlList.length <= 1}
           onClick={handlePreviousImg}
         >

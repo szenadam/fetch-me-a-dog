@@ -79,33 +79,6 @@ button:focus {
   }
 }
 
-.prev-btn {
-  color: #fff;
-  background-color: $Theme1Secondary;
-  font-size: 18px;
-  width: 150px;
-  height: 45px;
-  border: none;
-  border-radius: 1.5rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s;
-  &.theme2 {
-    background-color: $Theme2Secondary;
-  }
-
-  &:active {
-    background-color: $Theme2Secondary;
-    transform: translateY(4px);
-  }
-
-  &:hover {
-    background-color: $Theme1Other;
-    &.theme2 {
-      background-color: $Theme2Other;
-    }
-  }
-}
-
 .color-palette {
   display: flex;
   flex-direction: column;
