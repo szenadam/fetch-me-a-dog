@@ -1,8 +1,8 @@
 @import 'colors';
 
 h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   font-size: 72px;
   font-weight: 300;
   color: $Primary;
@@ -101,6 +101,10 @@ button:focus {
 
 .color-palette {
   display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:  25px;
+  left: 1rem;
 }
 
 .theme-1 {
@@ -139,6 +143,7 @@ button:focus {
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 1rem;
+  margin-right: 1rem;
 
   .theme-item {
     height: 20px;
