@@ -47,17 +47,17 @@ function App() {
     <div className={`wrapper${theme}`}>
       <div className="color-palette">
         <div className="theme-1" onClick={() => setTheme('')}>
-          <div className="theme-item item-1"></div>
-          <div className="theme-item item-2"></div>
-          <div className="theme-item item-3"></div>
-          <div className="theme-item item-4"></div>
+          <div className="theme-item color-1"></div>
+          <div className="theme-item color-2"></div>
+          <div className="theme-item color-3"></div>
+          <div className="theme-item color-4"></div>
         </div>
 
         <div className="theme-2" onClick={() => setTheme(' theme2')}>
-          <div className="theme-item item-1"></div>
-          <div className="theme-item item-2"></div>
-          <div className="theme-item item-3"></div>
-          <div className="theme-item item-4"></div>
+          <div className="theme-item color-1"></div>
+          <div className="theme-item color-2"></div>
+          <div className="theme-item color-3"></div>
+          <div className="theme-item color-4"></div>
         </div>
       </div>
       <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel="noreferrer noopener">

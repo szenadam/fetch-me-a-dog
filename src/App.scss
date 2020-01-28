@@ -5,7 +5,7 @@ h1 {
   margin-bottom: 25px;
   font-size: 72px;
   font-weight: 300;
-  color: $Primary;
+  color: $Theme1Primary;
   &.theme2 {
     color: $Theme2Primary;
     background: $Theme2Background;
@@ -20,8 +20,8 @@ button:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: $Background;
-  color: $Primary;
+  background: $Theme1Background;
+  color: $Theme1Primary;
   &.theme2 {
     color: $Theme2Primary;
     background: $Theme2Background;
@@ -45,7 +45,7 @@ button:focus {
 
 .btn {
   color: #fff;
-  background-color: $Secondary;
+  background-color: $Theme1Secondary;
   font-size: 21px;
   width: 160px;
   height: 60px;
@@ -60,12 +60,12 @@ button:focus {
   }
 
   &:active {
-    background-color: $Secondary;
+    background-color: $Theme1Secondary;
     transform: translateY(4px);
   }
 
   &:hover {
-    background-color: $Other;
+    background-color: $Theme1Other;
     &.theme2 {
       background-color: $Theme2Other;
     }
@@ -74,7 +74,7 @@ button:focus {
 
 .prev-btn {
   color: #fff;
-  background-color: $Secondary;
+  background-color: $Theme1Secondary;
   font-size: 18px;
   width: 150px;
   height: 45px;
@@ -92,7 +92,7 @@ button:focus {
   }
 
   &:hover {
-    background-color: $Other;
+    background-color: $Theme1Other;
     &.theme2 {
       background-color: $Theme2Other;
     }
@@ -117,7 +117,7 @@ button:focus {
   .theme-item {
     height: 20px;
     width: 20px;
-    background-color: $Primary;
+    background-color: $Theme1Primary;
     border-right: 1px solid black;
   }
 
@@ -132,10 +132,10 @@ button:focus {
     border-right: 0;
   }
 
-  .item-1 { background-color: $Primary; }
-  .item-2 { background-color: $Secondary; }
-  .item-3 { background-color: $Background; }
-  .item-4 { background-color: $Other; }
+  .color-1 { background-color: $Theme1Primary; }
+  .color-2 { background-color: $Theme1Secondary; }
+  .color-3 { background-color: $Theme1Background; }
+  .color-4 { background-color: $Theme1Other; }
 }
 
 .theme-2 {
@@ -148,7 +148,7 @@ button:focus {
   .theme-item {
     height: 20px;
     width: 20px;
-    background-color: $Primary;
+    background-color: $Theme1Primary;
     border-right: 1px solid black;
   }
 
@@ -163,10 +163,10 @@ button:focus {
     border-right: 0;
   }
 
-  .item-1 { background-color: $Theme2Primary; }
-  .item-2 { background-color: $Theme2Secondary; }
-  .item-3 { background-color: $Theme2Background; }
-  .item-4 { background-color: $Theme2Other; }
+  .color-1 { background-color: $Theme2Primary; }
+  .color-2 { background-color: $Theme2Secondary; }
+  .color-3 { background-color: $Theme2Background; }
+  .color-4 { background-color: $Theme2Other; }
 }
 
 .dog-image {
