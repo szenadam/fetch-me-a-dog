@@ -281,4 +281,48 @@ button:focus {
     flex-flow: row wrap;
     justify-content: space-around;
   }
+
+  .color-palette {
+    top:  80px;
+  }
+
+  .theme-1 {
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+    .theme-item {
+      height: 12px;
+      width: 12px;
+    }
+
+    .theme-item:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    .theme-item:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border-right: 0;
+    }
+  }
+
+  .theme-2 {
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+    .theme-item {
+      height: 12px;
+      width: 12px;
+    }
+
+    .theme-item:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    .theme-item:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border-right: 0;
+    }
+  }
 }
