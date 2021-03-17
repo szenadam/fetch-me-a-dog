@@ -31,30 +31,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contributing
 
-Pull requests are welcome.
+Any contributions are welcome
 
 ## Changelog
 
-- **0.1.0**
-  - Add icons, assets
-  - Add html elements
-  - Add styles according to the Figma design
-  - Center everything vertically
-- **0.2.0**
-  - Setup Travis CI
-  - Fetch dog picture from Dog API
-  - Minor style/UI changes
-- **0.3.0**
-  - Add responsive mobile view
-- **0.4.0**
-  - Add redux for managing previous state
-- **0.5.0**
-  - Add previous image functionality (remove redux, use React Hooks instead)
+- **0.6.1**
+  - Fix previous button border radius
+  - Fix GitHub badge on smaller devices
 - **0.6.0**
   - Add themes
   - Register service worker
   - Fix some media query styles
   - Minor code refactor
-- **0.6.1**
-  - Fix previous button border radius
-  - Fix GitHub badge on smaller devices
+- **0.5.0**
+  - Add previous image functionality (remove redux, use React Hooks instead)
+- **0.4.0**
+  - Add redux for managing previous state
+- **0.3.0**
+  - Add responsive mobile view
+- **0.2.0**
+  - Setup Travis CI
+  - Fetch dog picture from Dog API
+  - Minor style/UI changes
+- **0.1.0**
+  - Add icons, assets
+  - Add html elements
+  - Add styles according to the Figma design
+  - Center everything vertically
