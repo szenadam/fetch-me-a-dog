@@ -15,6 +15,9 @@ This project **was** bootstrapped with [Create React App](https://github.com/fac
 - Redesign styles to be more user friendly (figma designs v2)
 - Store theme in local storage
 - Fix root div background color so the whole view are has it when content is smaller than the screen view height.
+- Add images to favorites and store them in local storage. Add favorites view. Should add react routing with this.
+- Improve Accessibility.
+- Store build commit hash somewhere on the page.
 
 ## Requirements
 
