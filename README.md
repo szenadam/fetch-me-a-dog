@@ -13,6 +13,8 @@ This project **was** bootstrapped with [Create React App](https://github.com/fac
 - Travis CI auto deploy tagged commits
 - Hamburger menu on mobile
 - Redesign styles to be more user friendly (figma designs v2)
+- Store theme in local storage
+- Fix root div background color so the whole view are has it when content is smaller than the screen view height.
 
 ## Requirements
 
