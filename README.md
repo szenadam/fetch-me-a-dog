@@ -5,7 +5,8 @@
 ## Description
 
 Fetch me a Dog! is a page where you can click a button and you get a cute picture of a dog.
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project **was** bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses the
+[Dog API](https://dog.ceo/dog-api/).
 
 ## TODO
 
@@ -31,7 +32,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contributing
 
-Any contributions are welcome
+Any contributions are welcome.
 
 ## Changelog
 
