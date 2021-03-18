@@ -4,17 +4,16 @@
 
 ## Description
 
-Fetch me a Dog! is a page where you can click a button and you get a cute picture of a dog.
+Fetch me a Dog! is a page where you can click a button, and you get a cute picture of a dog.
 This project **was** bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses the
 [Dog API](https://dog.ceo/dog-api/).
 
 ## TODO
 
-- Travis CI auto deploy tagged commits
 - Hamburger menu on mobile
 - Redesign styles to be more user friendly (figma designs v2)
 - Store theme in local storage
-- Fix root div background color so the whole view are has it when content is smaller than the screen view height.
+- Fix root div background color, so the whole view are has it when content is smaller than the screen view height.
 - Add images to favorites and store them in local storage. Add favorites view. Should add react routing with this.
 - Improve Accessibility.
 - Store build commit hash somewhere on the page.

@@ -4,6 +4,9 @@ interface GithubBadgeProps {
   theme: string;
 }
 
+/**
+ *  GitHub badge component so the SVG's color can be dynamically changed.
+ */
 export function GithubBadge(props: GithubBadgeProps) {
   let backgroundFill= '#f9f6e7';
   let octoFill='#39566e';

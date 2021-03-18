@@ -1,3 +1,8 @@
+/**
+ * Run a function with a debounce time set.
+ * @param func
+ * @param waitFor
+ */
 export const debounce = <F extends (...args: any[]) => any>(func: F, waitFor: number) => {
   let timeout: any;
   return (...args: Parameters<F>): Promise<ReturnType<F>> =>

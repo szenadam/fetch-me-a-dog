@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './App.scss';
 import Dog from './assets/dog.svg';
@@ -20,13 +20,15 @@ function App() {
     handleFetchDog();
   }, []);
 
+  /**
+   * Fetch random dog image.
+   */
   function handleFetchDog(): void {
     fetch('https://dog.ceo/api/breeds/image/random')
       .then((response: Response) => response.json())
       .then((data: DogApiResponse) => {
         updateDogUrlList(oldList => {
-          const newList = [...oldList, data.message];
-          return newList;
+          return [...oldList, data.message];
         });
       })
       .catch((error: any) => {
@@ -34,6 +36,9 @@ function App() {
       });
   }
 
+  /**
+   * Fetch previous dog url from the state.
+   */
   function handlePreviousImg(): void {
     updateDogUrlList(oldList => {
       oldList.pop();
@@ -45,17 +50,17 @@ function App() {
     <div className={`wrapper${theme}`}>
       <div className="color-palette">
         <div className="theme-1" onClick={() => setTheme('')}>
-          <div className="theme-item color-1"></div>
-          <div className="theme-item color-2"></div>
-          <div className="theme-item color-3"></div>
-          <div className="theme-item color-4"></div>
+          <div className='theme-item color-1'/>
+          <div className='theme-item color-2'/>
+          <div className='theme-item color-3'/>
+          <div className='theme-item color-4'/>
         </div>
 
         <div className="theme-2" onClick={() => setTheme(' theme2')}>
-          <div className="theme-item color-1"></div>
-          <div className="theme-item color-2"></div>
-          <div className="theme-item color-3"></div>
-          <div className="theme-item color-4"></div>
+          <div className='theme-item color-1'/>
+          <div className='theme-item color-2'/>
+          <div className='theme-item color-3'/>
+          <div className='theme-item color-4'/>
         </div>
       </div>
       <a href="https://github.com/szenadam/fetch-me-a-dog" target="_blank" rel="noreferrer noopener">
